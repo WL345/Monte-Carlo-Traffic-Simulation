@@ -3,8 +3,10 @@ tests.py: Automated test suite validating core simulation correctness.
 """
 
 import unittest
-from traffic_generator import TrafficGenerator
+
 from simulation import SimulationEngine
+from traffic_generator import TrafficGenerator
+
 
 class TestTrafficSimulation(unittest.TestCase):
     

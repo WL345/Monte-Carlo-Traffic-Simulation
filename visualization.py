@@ -4,6 +4,7 @@ visualization.py: Generates comparison charts with confidence intervals.
 
 import matplotlib.pyplot as plt
 
+
 def plot_system_comparison(results_dict):
     systems = list(results_dict.keys())
     means = [results_dict[sys]["average_waiting_time"]["mean"] for sys in systems]

@@ -30,7 +30,7 @@ class FourWayStopManager:
                         oldest_veh = veh
                         oldest_dir = direction
                         
-            if oldest_veh is not None:
+            if oldest_veh is not None and oldest_dir is not None:
                 self.current_crossing_vehicle = oldest_veh
                 permissions[oldest_dir] = True
         else:

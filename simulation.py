@@ -3,10 +3,12 @@ simulation.py: Time-based discrete-event intersection simulation engine.
 """
 
 import numpy as np
-from intersection import Intersection
-from traffic_lights import TrafficLightController
-from roundabout import RoundaboutManager
+
 from four_way_stop import FourWayStopManager
+from intersection import Intersection
+from roundabout import RoundaboutManager
+from traffic_lights import TrafficLightController
+
 
 class SimulationEngine:
     def __init__(self, system_type: str, traffic_data: dict, settings: dict, duration_minutes: float):
@@ -75,8 +77,7 @@ class SimulationEngine:
                     if self.system_type == 'roundabout':
                         self.roundabout.process_entry()
 
-            if self.system_type == 'roundabout':
-                if self.rng.random() < 0.3 * self.dt:
+            if self.system_type == 'roundabout' and self.rng.random() < 0.3 * self.dt:
                     self.roundabout.process_exit()
 
             for direction, q in self.intersection.queues.items():

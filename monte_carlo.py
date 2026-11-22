@@ -3,8 +3,10 @@ monte_carlo.py: Monte Carlo experiment manager with Common Random Numbers and co
 """
 
 import numpy as np
-from traffic_generator import TrafficGenerator
+
 from simulation import SimulationEngine
+from traffic_generator import TrafficGenerator
+
 
 class MonteCarloManager:
     def __init__(self, traffic_scenarios: dict, num_iterations: int = 50, duration_minutes: float = 30.0):

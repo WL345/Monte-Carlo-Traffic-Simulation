@@ -69,8 +69,7 @@ class TrafficLightController:
                 if self.phase_timer >= self.yellow_time:
                     self.current_phase = 5
                     self.phase_timer = 0.0
-            elif self.current_phase == 5:
-                if self.phase_timer >= self.all_red_time:
+            elif self.current_phase == 5 and self.phase_timer >= self.all_red_time:
                     self.current_phase = 0
                     self.phase_timer = 0.0
 
